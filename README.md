@@ -6,7 +6,7 @@ PHP OOP functions to create nice singin and singup forms.
 
 2) Create table or import registrazione.sql
 
-SQL code to create table:<br>
+SQL code to create table:<br><br>
 <code>CREATE TABLE IF NOT EXISTS `iscritti` (
   `id_utente` int(4) NOT NULL AUTO_INCREMENT,
   `nome_utente` varchar(20) DEFAULT NULL,
