@@ -19,4 +19,4 @@ SQL code to create table:
   UNIQUE KEY `email` (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
-Now you are ready to use functions.
+<h2>Now you are ready to use functions.<h2>
