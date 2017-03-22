@@ -1,27 +1,27 @@
 <?php
-# inizializzazione della sessione
+# initializing the session
 @session_start();
-# inclusione del file di funzione
+# including functions file
 @include_once 'functions.php';
-# istanza della classe
+# instance of the class
 $obj = new Iscrizioni();
-# identificativo univoco dell'utente
+# user's unique identifier
 $id_utente = $_SESSION['id_utente'];
-# chiamata al metodo per la verifica della sessione
+# method call for verification of the session
 if (!$obj->verifica_sessione())
 {
-  #redirect in caso di sessione non verificata
+  #r edirect in case of not verified session
   @header("location:autenticazione.php");
 }
-# controllo sul valore di input per il logout
+# check of the input value fot the logout
 if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) 
 {
-  # chiamata al metodo per il logout
+  # method call to logout
   $obj->esci();
-  # redirezione alla pagina di login
+  # redirect to the login page
   @header("location:autenticazione.php");
 }
-# Area riservata
+# reserved area
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
