@@ -1,16 +1,16 @@
 <?php
-# definizione delle costanti per l'autenticazione al DBMS
+# definition of the constants for authentication to the DBMS
 define('DATA_HOST', 'localhost');
 define('DATA_UTENTE', 'root');
 define('DATA_PASS', '');
 define('DATA_DB', 'registrazione');
-# classe per l'interazione con il database
+# class for the interaction with the database
 class DATA_Class {
-  # definizione del costruttore
+  # manufacturer defined
   function __construct() {
-    # connessione al DBMS
+    # DBMS connection
     $connessione = @mysql_connect(DATA_HOST, DATA_UTENTE, DATA_PASS) or die('Errore nella connessione: ' . mysql_error());
-    # selezione del database
+    # database selection
     @mysql_select_db(DATA_DB, $connessione) or die('Errore dal database: ' . mysql_error());
   }
 }
